@@ -15,10 +15,10 @@ public class ApiInterfaceRealization extends Application {
         super.onCreate();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.producthunt.com/") //Базовая часть адреса
-                .addConverterFactory(GsonConverterFactory.create()) //Конвертер, необходимый для преобразования JSON'а в объекты
+                .baseUrl("https://api.producthunt.com/")
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        productHuntApi = retrofit.create(ProductHuntApi.class); //Создаем объект, при помощи которого будем выполнять запросы
+        productHuntApi = retrofit.create(ProductHuntApi.class);
     }
 
     public static ProductHuntApi getApi() {
