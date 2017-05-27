@@ -18,4 +18,6 @@ public interface ProductHuntApi {
             " Host: api.producthunt.com"})
     @GET("/v1/posts/all")
     Call<PostModel> getData(@Query("search[category]") String categoryName, @Query("per_page") int numberOfElements);
+    
+    //@GET for notifications
 }
